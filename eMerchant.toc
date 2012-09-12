@@ -1,0 +1,7 @@
+## Interface: 50001
+## Version: 5.0.2
+## Title: eMerchant
+## Notes: Sells all the gray and predefined items in your bags and repairs your equiptment.
+## Author: Ession
+
+eMerchant.lua
