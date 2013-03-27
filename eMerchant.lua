@@ -5,7 +5,7 @@
 --    Description:  Sells all the gray and predefined items in
 --                  your bags and repairs your equiptment.
 --
---        Version:  5.2.1
+--        Version:  5.0.2
 --
 --         Author:  Mathias Jost (mail@mathiasjost.com)
 --
@@ -46,11 +46,20 @@ eMerchant:SetScript("OnEvent", function()
 	if CanMerchantRepair() then
 
 		-- do you need repairing
-		repairNeeded = select(2, GetRepairAllCost())
-
+		repairAllCost, repairNeeded = GetRepairAllCost()
+		if (IsInGuild()) then
+			withdrawLimit = GetGuildBankWithdrawMoney()
+			guildBankMoney = GetGuildBankMoney()
+			if (withdrawLimit == -1) then
+				withdrawLimit = guildBankMoney
+			else
+				withdrawLimit = min(withdrawLimit, guildBankMoney)
+			end
+		end
 		if repairNeeded then
+			print(withdrawLimit)
 			-- checks if you can use the guilds funds
-			if CanGuildBankRepair() and not IsAltKeyDown() then
+			if CanGuildBankRepair() and repairAllCost < withdrawLimit then				
 				-- repair using guild funds
 				RepairAllItems(1)
 				DEFAULT_CHAT_FRAME:AddMessage("[|cFFAAAAAAeMerchant|r] repaired using guild funds.")
