@@ -57,7 +57,6 @@ eMerchant:SetScript("OnEvent", function()
 			end
 		end
 		if repairNeeded then
-			print(withdrawLimit)
 			-- checks if you can use the guilds funds
 			if CanGuildBankRepair() and repairAllCost < withdrawLimit then				
 				-- repair using guild funds
