@@ -5,10 +5,11 @@
 --    Description:  Sells all the gray and predefined items in
 --                  your bags and repairs your equiptment.
 --
---        Version:  5.0.2
+--        Version:  5.2.1a
 --
 --         Author:  Mathias Jost (mail@mathiasjost.com)
 --
+--		   Edited:	Lars Theviﬂen
 -- =============================================================================
 
 
