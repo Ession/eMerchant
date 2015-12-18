@@ -1,5 +1,5 @@
-## Interface: 50200
-## Version: 5.2.2
+## Interface: 60200
+## Version: 6.2.1
 ## Title: eMerchant
 ## Notes: Sells all the gray and predefined items in your bags and repairs your equiptment.
 ## Author: Ession, Larth
