@@ -5,7 +5,7 @@
 --    Description:  Sells all the gray and predefined items in
 --                  your bags and repairs your equiptment.
 --
---        Version:  6.2.1
+--        Version:  7.0.1
 --
 --         Author:  Mathias Jost (mail@mathiasjost.com)
 --
